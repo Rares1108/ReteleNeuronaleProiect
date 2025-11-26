@@ -1,0 +1,41 @@
+## 2. Descrierea Setului de Date
+
+### 2.1 Sursa datelor
+
+* **Origine:** Dataset public *Garbage Classification* de pe Kaggle, conținând imagini cu diferite tipuri de deșeuri (plastic, hârtie, sticlă, metal etc.).
+* **Modul de achiziție:** ☑ Fișier extern (descărcat din sursă publică)
+* **Perioada / condițiile colectării:** Datasetul a fost colectat și publicat între 2020–2023, conținând imagini realizate în condiții variate (interior/exterior, iluminare diferită, fundaluri diverse precum lemn, beton sau plastic). Imaginile provin de la utilizatori Kaggle, realizate cu camere și telefoane diferite.
+
+---
+
+### 2.2 Caracteristicile dataset-ului
+
+* **Număr total de observații:** 2.527 imagini brute  
+  (după eliminarea clasei „trash”, numărul final utilizat este ~2.200)
+
+* **Număr de caracteristici (features):**  
+  1 feature principal – **imaginea RGB** (3 canale: R, G, B)
+
+* **Tipuri de date:**  
+  ☐ Numerice / ☐ Categoriale / ☐ Temporale / ☑ Imagini
+
+* **Format fișiere:**  
+  ☐ CSV / ☐ TXT / ☐ JSON / ☐ PNG / ☑ JPG / JPEG
+
+---
+
+### 2.3 Descrierea fiecărei caracteristici
+
+Datasetul conține imagini, iar fiecare imagine este reprezentată prin valorile pixelilor ei. Tabelul de mai jos descrie caracteristicile specifice:
+
+| **Caracteristică** | **Tip** | **Unitate** | **Descriere** | **Domeniu valori** |
+|--------------------|---------|-------------|---------------|--------------------|
+| Imagine RGB | imagine / matrice | pixeli | Reprezentarea vizuală a obiectului (deșeu). Imagine color cu 3 canale (Roșu, Verde, Albastru). | 0–255 pentru fiecare pixel |
+| Lățime | numeric | pixeli | Numărul de pixeli pe axa orizontală. | 200–600 px |
+| Înălțime | numeric | pixeli | Numărul de pixeli pe axa verticală. | 200–600 px |
+| Canal R | numeric | intensitate | Componenta roșie a culorii. | 0–255 |
+| Canal G | numeric | intensitate | Componenta verde a culorii. | 0–255 |
+| Canal B | numeric | intensitate | Componenta albastră a culorii. | 0–255 |
+| Etichetă (clasă) | categorial | – | Materialul deșeului după maparea finală. | {plastic, hartie, sticla, metal} |
+
+---
