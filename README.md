@@ -5,10 +5,11 @@ Rețele Neuronale – FIIR, Universitatea POLITEHNICA București
 Chelcea Rares-Gabriel  
 Grupa: 634AB  
 An: 2025
+Data: 27.11.2025
 
 ---
 
-project-name/
+ReteleNeuronaleProiect/
 ├── README.md
 ├── docs/
 │   └── datasets/          # descriere seturi de date, surse, diagrame
