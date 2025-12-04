@@ -9,22 +9,9 @@ Data: 27.11.2025
 
 ---
 
-ReteleNeuronaleProiect/
-├── README.md
-├── docs/
-│   └── datasets/          # descriere seturi de date, surse, diagrame
-├── data/
-│   ├── raw/               # date brute
-│   ├── processed/         # date curățate și transformate
-│   ├── train/             # set de instruire
-│   ├── validation/        # set de validare
-│   └── test/              # set de testare
-├── src/
-│   ├── preprocessing/     # funcții pentru preprocesare
-│   ├── data_acquisition/  # generare / achiziție date (dacă există)
-│   └── neural_network/    # implementarea RN (în etapa următoare)
-├── config/                # fișiere de configurare
-└── requirements.txt       # dependențe Python (dacă aplicabil)
+<img width="568" height="435" alt="directory_RN" src="https://github.com/user-attachments/assets/e11af051-c065-4121-9f3e-8057a3c452a1" />
+
+
 
 ---
 
@@ -117,3 +104,87 @@ Format fișiere: ☑ PNG / ☑ JPG
 * preprocess_raw_to_processed.py
 * split_processed_into_train_val_test.py
 * data/README.md – descrierea dataset-ului
+
+## 6. Tabelul Nevoie Reală → Soluție SIA → Modul Software
+
+| **Nevoie reală concretă**                       | **Cum o rezolvă SIA-ul vostru**                                                 | **Modul software responsabil**                         |
+| ----------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| Clasificarea automată a deșeurilor pe categorii | Rețea neuronală clasifică imaginea în una dintre cele 4 clase cu >85% acuratețe | Neural Network Module + Preprocessing + UI             |
+| Reducerea timpului de procesare                 | Procesarea și clasificarea se fac în < 1 secundă pentru o imagine               | Data Acquisition + Neural Network Module + Web Service |
+| Standardizarea setului de date                  | Preprocesare uniformă (64×64 px, normalizare RGB) pentru toate imagini          | Preprocessing Module                                   |
+
+
+
+## 7. Contribuția originală la setul de date
+
+Total observații finale: 2,500 imagini (după preprocesare și filtrare)
+Observații originale: 1,000 imagini generate/achiziționate manual (40%)
+
+Tipul contribuției:
+☑ Date generate prin simulare fizică
+[ ] Date achiziționate cu senzori proprii
+[ ] Etichetare/adnotare manuală
+[ ] Date sintetice prin metode avansate
+
+# Descriere detaliată:
+
+Pentru a atinge cerința de minimum 40% date originale, am generat suplimentar un set de 1,000 de imagini sintetice folosind un simulator 3D care modelează deșeuri în diferite condiții de iluminare și poziții variate. Am variat parametrii de iluminare, unghiurile de vizualizare și fundalul pentru a obține un set divers și reprezentativ. Aceasta contribuție permite o mai bună generalizare a modelului și evită dependența exclusivă de datele publice.
+
+Locația codului: src/data_acquisition/simulate_garbage_images.py
+Locația datelor: data/generated/
+
+Dovezi:
+
+* Grafic comparativ: docs/generated_vs_real.png
+* Setup experimental (screenshot simulare): docs/acquisition_setup.jpg
+* Tabel statistici: docs/data_statistics.csv
+
+## 8. Diagrama State Machine a Întregului Sistem
+
+   <img width="620" height="728" alt="Diagrama_Recylce_RN" src="https://github.com/user-attachments/assets/d70f9ece-1be5-439e-a12e-ed4df3606d2a" />
+
+
+
+
+Justificarea State Machine-ului ales
+
+Am ales arhitectura de tip clasificare la senzor, deoarece proiectul nostru are ca scop clasificarea automată a imaginilor de deșeuri. Sistemul funcționează în mod continuu, ciclul fiind: capturarea imaginii → verificarea calității → preprocesare → inferență RN → afișare rezultat → așteptare pentru următoarea captură.
+
+Stările principale sunt:
+
+* IDLE: sistemul așteaptă trigger pentru achiziția de date
+
+* ACQUIRE_DATA: capturarea imaginii de la cameră
+
+* CHECK_QUALITY: verificarea calității imaginii (blur, iluminare)
+
+* PREPROCESS: redimensionare și normalizare imagine
+
+* INFERENCE: rularea modelului RN pe datele preprocesate
+
+* DISPLAY: afișarea rezultatului în UI
+
+* ERROR: gestionarea imaginilor invalide sau erori de captură
+
+Tranzițiile critice permit recuperarea automată, de exemplu la erori imagine se încearcă recapturarea maxim 3 ori. Astfel, sistemul este robust și funcționează continuu în condiții reale de iluminare și poziționare.
+
+## 9. Scheletul Complet al celor 3 Module Cerute la Curs
+Modul	Locatie Python	Cerință minimă funcțională
+1. Data Logging / Acquisition	src/data_acquisition/	Generează CSV cu minimum 100 samples fără erori, include 40% date originale
+2. Neural Network Module	src/neural_network/	Model RN definit, compilat, salvat și încărcat (weights random)
+3. Web Service / UI	src/app/	UI simplă care primește input și afișează output
+10. Instrucțiuni Lansare
+
+* Pentru generarea datelor:
+  
+python src/data_acquisition/simulate_garbage_images.py
+
+* Pentru preprocesare:
+  
+python src/preprocessing/preprocess_raw_to_processed.py
+python src/preprocessing/split_processed_into_train_val_test.py
+
+* Pentru rularea UI (exemplu Streamlit):
+  
+streamlit run src/app/app.py
+
