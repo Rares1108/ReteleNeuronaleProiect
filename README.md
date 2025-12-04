@@ -4,8 +4,7 @@ Rețele Neuronale – FIIR, Universitatea POLITEHNICA București
 ## Student
 Chelcea Rares-Gabriel  
 Grupa: 634AB  
-An: 2025
-Data: 4.12.2025
+Data: 04.12.2025
 
 ---
 
