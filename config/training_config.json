@@ -1,0 +1,17 @@
+{
+  "img_height": 64,
+  "img_width": 64,
+  "channels": 3,
+  "batch_size": 32,
+  "epochs": 20,
+  "learning_rate": 0.001,
+  "optimizer": "adam",
+  "loss": "categorical_crossentropy",
+  "train_dir": "data/train",
+  "val_dir": "data/validation",
+  "test_dir": "data/test",
+  "model_path": "models/trained_model.h5",
+  "plot_history_path": "docs/screenshots/training_history.png",
+  "confusion_matrix_path": "docs/screenshots/confusion_matrix.png",
+  "classification_report_csv": "docs/screenshots/classification_report.csv"
+}
