@@ -140,8 +140,7 @@ Dovezi:
 
 ## 8. Diagrama State Machine a Întregului Sistem
 
-   <img width="620" height="728" alt="Diagrama_Recylce_RN" src="https://github.com/user-attachments/assets/d70f9ece-1be5-439e-a12e-ed4df3606d2a" />
-
+ <img width="522" height="781" alt="schema_buna drawio" src="https://github.com/user-attachments/assets/d08b71d9-af2e-4829-81ee-4ac8bf87bf16" />
 
 
 
