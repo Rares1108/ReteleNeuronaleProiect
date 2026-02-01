@@ -6,7 +6,7 @@
 | **Grupa / Specializare** | 634AB / Informatica Industriala |
 | **Disciplina** | Retele Neuronale |
 | **Institutie** | POLITEHNICA Bucuresti - FIIR |
-| **Link Repository GitHub** | [Se va completa cu link-ul repository-ului actual] |
+| **Link Repository GitHub** | https://github.com/Rares1108/ReteleNeuronaleProiect |
 | **Acces Repository** | Public |
 | **Stack Tehnologic** | Python |
 | **Domeniul Industrial de Interes (DII)** | Gestionare Deseuri / Reciclare Inteligenta |
@@ -684,7 +684,7 @@ Documentare incrementala. Actualizez README dupa fiecare milestone major, nu las
 
 ### Acces si Versionare
 
-- [ ] **Repository accesibil** cadrelor didactice RN (public sau privat cu acces) - **STATUS: De verificat**
+- [X] **Repository accesibil** cadrelor didactice RN (public sau privat cu acces) - **STATUS: DA**
 - [X] **Tag `v0.6-optimized-final`** creat si pushed - **STATUS: DA**
 - [X] **Commit-uri incrementale** vizibile in `git log` (nu 1 commit gigantic) - **STATUS: DA**
 - [X] **Fisiere mari** (>100MB) excluse sau in `.gitignore` - **STATUS: DA**
