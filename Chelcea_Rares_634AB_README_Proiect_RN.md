@@ -685,8 +685,8 @@ Documentare incrementala. Actualizez README dupa fiecare milestone major, nu las
 ### Acces si Versionare
 
 - [ ] **Repository accesibil** cadrelor didactice RN (public sau privat cu acces) - **STATUS: De verificat**
-- [ ] **Tag `v0.6-optimized-final`** creat si pushed - **STATUS: De creat**
-- [X] **Commit-uri incrementale** vizibile in `git log` (nu 1 commit gigantic) - **STATUS: Presupus DA**
+- [X] **Tag `v0.6-optimized-final`** creat si pushed - **STATUS: DA**
+- [X] **Commit-uri incrementale** vizibile in `git log` (nu 1 commit gigantic) - **STATUS: DA**
 - [X] **Fisiere mari** (>100MB) excluse sau in `.gitignore` - **STATUS: DA**
 
 ### Verificare Anti-Plagiat
@@ -701,7 +701,7 @@ Documentare incrementala. Actualizez README dupa fiecare milestone major, nu las
 
 **Versiune document:** FINAL pentru examen  
 **Ultima actualizare:** 01.02.2026  
-**Tag Git:** `v0.6-optimized-final` (de creat)
+**Tag Git:** `v0.6-optimized-final`
 
 **OBSERVATII CRITICE - REZOLVATE:**
 1. Proiectul INDEPLINESTE cerinta Accuracy ≥70% (realizat: 79%) ✓
@@ -718,4 +718,3 @@ Documentare incrementala. Actualizez README dupa fiecare milestone major, nu las
 
 ---
 
-*Acest README serveste ca documentatie principala pentru Livrabilul 1 (Aplicatie RN). Pentru Livrabilul 2 (Prezentare PowerPoint), consultati structura din RN_Specificatii_proiect.pdf.*
