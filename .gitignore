@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (if too large)
+*.h5
+*.hdf5
+
+# Data (if too large)
+# data/raw/
+# data/processed/
+
+# OS
+.DS_Store
+Thumbs.db
