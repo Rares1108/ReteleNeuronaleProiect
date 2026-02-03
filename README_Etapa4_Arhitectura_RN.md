@@ -225,13 +225,13 @@ confidence = np.max(predictions[0])
 ## 6. Fișiere Generate Etapa 4
 
 ```
-✅ src/neural_network/
+ src/neural_network/
    ├── model_definition.py          - Definiție model CNN
    ├── model_architecture.py        - Funcție build_model()
    ├── model_architecture.h5        - Model salvat (fără weights)
    └── model_architecture.json      - Model JSON (alternativ)
 
-✅ src/inference/
+ src/inference/
    ├── run_inference.py            - Script inference pe imagini
    └── ui/
        └── app.py                  - UI Streamlit (Etapa 5+)
@@ -261,7 +261,7 @@ confidence = np.max(predictions[0])
 - [x] Model salvat (architecture)
 - [x] Test input/output validation
 
-**ETAPA 4 COMPLETA** ✅
+**ETAPA 4 COMPLETA** 
 
 ---
 
