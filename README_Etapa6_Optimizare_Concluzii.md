@@ -178,16 +178,16 @@ Actual Hartie    89     4       3       4
 ### 5.1 Evaluarea Performanței Finale
 
 **Obiective Atinse:**
-- ✅ Model RN funcțional cu accuracy 79% pe test set
-- ✅ F1-score 0.76 (peste 0.60 baseline)
-- ✅ Optimizare model: +7% accuracy, -27% latență vs Etapa 5
-- ✅ 5 experimente de optimizare documentate
+-  Model RN funcțional cu accuracy 79% pe test set
+-  F1-score 0.76 (peste 0.60 baseline)
+-  Optimizare model: +7% accuracy, -27% latență vs Etapa 5
+-  5 experimente de optimizare documentate
 
 **Obiective Parțial Atinse:**
-- ⚠️ False Negative Rate 8% (țintă <3%) - acceptabil pentru MVP
-- ⚠️ Hartie metalizată și fire electrice nereprerezentate - gap dataset identificat
+-  False Negative Rate 8% (țintă <3%) - acceptabil pentru MVP
+-  Hartie metalizată și fire electrice nereprerezentate - gap dataset identificat
 
-**Verdict Final:** **Sistem FUNCȚIONAL și OPTIMIZAT pentru producție pilot** ✅
+**Verdict Final:** **Sistem FUNCȚIONAL și OPTIMIZAT pentru producție pilot** 
 
 ### 5.2 Limitări Identificate
 
@@ -267,16 +267,16 @@ Actual Hartie    89     4       3       4
 ## 7. Fișiere Generate Etapa 6
 
 ```
-✅ src/neural_network/saved_models/
+ src/neural_network/saved_models/
    ├── trained_model_improved.h5 (baseline Etapa 5)
    └── optimized_model_v2.h5     (model final Etapa 6)
 
-✅ Documentație:
+ Documentație:
    ├── docs/confusion_matrix_optimized.png
    ├── docs/training_history.csv
    └── README_Etapa6_Optimizare_Concluzii.md
 
-✅ Evaluare:
+ Evaluare:
    └── src/neural_network/evaluate_model.py
 ```
 
@@ -292,7 +292,7 @@ Actual Hartie    89     4       3       4
 - [x] Limitări și direcții viitoare documentate
 - [x] Lecții învățate articulate
 
-**ETAPA 6 COMPLETA - PROIECT FINALIZAT** ✅
+**ETAPA 6 COMPLETA - PROIECT FINALIZAT** 
 
 ---
 
@@ -326,7 +326,7 @@ streamlit run src/inference/ui/app.py
 
 ---
 
-**PROIECT RETELE NEURONALE COMPLET ✅**
+**PROIECT RETELE NEURONALE COMPLET **
 
 **Data finalizare:** Ianuarie 2026  
 **Student:** Chelcea Rares-Gabriel, Grupa 634AB  
