@@ -225,13 +225,13 @@ confidence = np.max(predictions[0])
 ## 6. Fișiere Generate Etapa 4
 
 ```
-✅ src/neural_network/
+ src/neural_network/
    ├── model_definition.py          - Definiție model CNN
    ├── model_architecture.py        - Funcție build_model()
    ├── model_architecture.h5        - Model salvat (fără weights)
    └── model_architecture.json      - Model JSON (alternativ)
 
-✅ src/inference/
+ src/inference/
    ├── run_inference.py            - Script inference pe imagini
    └── ui/
        └── app.py                  - UI Streamlit (Etapa 5+)
@@ -243,12 +243,12 @@ confidence = np.max(predictions[0])
 
 | **Validare** | **Status** | **Detalii** |
 |-------------|----------|-----------|
-| Model compilat | ✅ | Optimizer Adam, loss categorical_crossentropy |
-| Shape input corect | ✅ | (128, 128, 3) |
-| Număr clase | ✅ | 4 (plastic, hartie, sticla, metal) |
-| Parametri antrenabili | ✅ | ~7.4M parametri (lean pentru dataset mediu) |
-| Salvare model | ✅ | HDF5 + JSON format |
-| Forward pass test | ✅ | Predicție test image → 4 probabilități |
+| Model compilat | OK | Optimizer Adam, loss categorical_crossentropy |
+| Shape input corect | OK | (128, 128, 3) |
+| Număr clase | OK | 4 (plastic, hartie, sticla, metal) |
+| Parametri antrenabili | OK | ~7.4M parametri (lean pentru dataset mediu) |
+| Salvare model | OK | HDF5 + JSON format |
+| Forward pass test | OK | Predicție test image → 4 probabilități |
 
 ---
 
@@ -261,7 +261,7 @@ confidence = np.max(predictions[0])
 - [x] Model salvat (architecture)
 - [x] Test input/output validation
 
-**ETAPA 4 COMPLETA** ✅
+**ETAPA 4 COMPLETA** 
 
 ---
 
