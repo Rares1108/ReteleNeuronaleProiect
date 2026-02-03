@@ -1,3 +1,90 @@
+# Proiect RN – Clasificare Deșeuri (CNN + Transfer Learning)
+
+## 1. Identificare proiect
+| Câmp | Valoare |
+|---|---|
+| Student | Chelcea Rares-Gabriel |
+| Grupa / Specializare | 634AB / Informatică Industrială |
+| Disciplina | Rețele Neuronale |
+| Instituție | POLITEHNICA București – FIIR |
+| Repo | https://github.com/Rares1108/ReteleNeuronaleProiect |
+| Domeniu | Gestionare deșeuri / Reciclare inteligentă |
+| Tip rețea | CNN cu Transfer Learning (MobileNetV2) |
+
+## 2. Scop și idee
+Scopul proiectului este clasificarea automată a deșeurilor în 4 clase: **hârtie, metal, plastic, sticlă**. Soluția folosește un CNN cu transfer learning și o interfață Streamlit pentru testare rapidă.
+
+## 3. Dataset
+**Origine:** dataset public Kaggle – “Garbage Classification Dataset” (subset 4 clase)
+
+**Total:** 1940 imagini
+
+**Split:**
+- Train: 1356
+- Validation: 290
+- Test: 294
+
+**Distribuție test (support):**
+- Hârtie: 130
+- Metal: 45
+- Plastic: 73
+- Sticlă: 46
+
+**Contribuție originală:** 0% (dataset public).
+
+## 4. Preprocesare
+- Redimensionare la **128×128**
+- Normalizare $[0,1]$ (rescale $1/255$)
+- Augmentare train: rotație, shift, flip, zoom, brightness
+- Opțional în UI: central crop + eliminare fundal alb
+
+## 5. Model
+**Arhitectură (final):**
+- MobileNetV2 (pretrained, frozen)
+- GlobalAveragePooling2D
+- Dropout(0.5)
+- Dense(256, ReLU)
+- Dropout(0.3)
+- Dense(4, Softmax)
+
+**Motiv:** performanță mai bună pe dataset mic, generalizare mai bună decât un CNN simplu.
+
+## 6. Rezultate (Test set – 294 imagini)
+**Accuracy:** 85%
+
+**Macro:**
+- Precision: 0.81
+- Recall: 0.79
+- F1: 0.80
+
+**Per clasă:**
+- Hârtie: Precision 94.8%, Recall 98.5%, F1 0.966
+- Metal: Precision 79.4%, Recall 60.0%, F1 0.684
+- Plastic: Precision 77.5%, Recall 84.9%, F1 0.810
+- Sticlă: Precision 73.3%, Recall 71.7%, F1 0.725
+
+**Observație:** confuzii frecvente între plastic și sticlă (transparență/reflexii similare).
+
+## 7. UI (Streamlit)
+Aplicația permite upload de imagine și afișează **clasa finală + confidence**.
+
+Rulare:
+```
+python -m streamlit run run_interface.py
+```
+
+## 8. Fișiere utile
+- `run_interface.py` – UI Streamlit
+- `src/neural_network/train_model_improved.py` – antrenare transfer learning
+- `src/neural_network/model_definition_improved.py` – definiție model
+- `docs/screenshots/` – grafice (confusion matrix, metrici, arhitectură)
+
+## 9. Limitări
+- Recall scăzut pe metal (dataset mic și variabil)
+- Confuzii plastic/sticlă în imagini transparente
+
+## 10. Concluzie
+Modelul atinge **85% accuracy** pe test set și este potrivit pentru demonstrații și prototip. Pentru îmbunătățiri: colectare mai mult metal/sticlă și augmentări orientate pe transparență/reflectanță.
 ## 1. Identificare Proiect
 
 | Camp | Valoare |
