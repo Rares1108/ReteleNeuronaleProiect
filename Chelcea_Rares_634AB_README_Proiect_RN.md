@@ -103,8 +103,8 @@ Modelul atinge **85% accuracy** pe test set și este potrivit pentru demonstraț
 
 | Metric | Tinta Minima | Rezultat Etapa 6 | Rezultat Final | Imbunatatire | Status |
 |--------|--------------|------------------|----------------|--------------|--------|
-| Accuracy (Test Set) | ≥70% | 65% | 81% | N/A | X |
-| F1-Score (Macro) | ≥0.65 | 0.60 | 0.80 | N/A | X |
+| Accuracy (Test Set) | ≥70% | 65% | 65% | N/A | X |
+| F1-Score (Macro) | ≥0.65 | 0.60 | 0.60 | N/A | X |
 | Latenta Inferenta | <500ms | ~500ms | ~500ms | - | DA |
 | Contributie Date Originale | ≥40% | 0% | 0% | - | X |
 | Nr. Experimente Optimizare | ≥4 | 3 | 3 | - | X |
