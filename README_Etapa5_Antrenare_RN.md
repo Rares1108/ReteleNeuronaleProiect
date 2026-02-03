@@ -44,7 +44,7 @@ Pasi:
 ### Metode & Performanță
 - Training accuracy (final): **91%**
 - Validation accuracy (final): **80%**
-- **Test accuracy: 85%** ✅
+- **Test accuracy: 85%** 
 
 ### Metrici pe Test Set (294 imagini)
 
@@ -78,21 +78,21 @@ Raport clasificare (CSV): `docs/screenshots/classification_report.csv`
 
 ### Performanță per Clasă
 
-#### ✅ HÂRTIE - Cea mai bună (95% precision, 98% recall)
+####  HÂRTIE - Cea mai bună (95% precision, 98% recall)
 - **Punct forte**: Transfer learning (MobileNetV2) recunoaște foarte bine textura hârtiei
 - **Rezultat excelent**: 128 din 130 imagini corect clasificate
   
-#### 🟢 PLASTIC - Foarte bună (78% precision, 85% recall)
+####  PLASTIC - Foarte bună (78% precision, 85% recall)
 - **Punct forte**: Dataset echilibrat și augmentare bună
 - **Erori principale**: Confuzii cu sticlă (recipiente transparente)
 
-#### 🟡 STICLĂ - Bună (73% precision, 72% recall)
+####  STICLĂ - Bună (73% precision, 72% recall)
 - **Challenge**: Transparență și reflexii foarte asemănătoare cu plasticul
 - **Erori principale**:
   - Confuzii cu PLASTIC (recipiente transparente)
   - Greu de diferențiat fără informații de textură
 
-#### ⚠️ METAL - Moderate (79% precision, 60% recall)
+####  METAL - Moderate (79% precision, 60% recall)
 - **Problemă**: Recall scăzut - modelul pierde 40% din cazurile de metal
 - **Cauze**: Dataset mic (45 imagini test), variabilitate mare (suprafețe lucioase vs mate)
 - **Cauze**: Reflexii asemănătoare cu sticlă, variabilitate culori
@@ -132,9 +132,9 @@ Prec |71% 50% 64% 58%
 ### Sugestii de Remediere
 
 #### Scurt Termen
-- ✅ Crește dataset: +500 imagini per clasă
-- ✅ Augmentare avansat: zoom, shear, contrast
-- ✅ Epoci mai mari cu monitoring
+-  Crește dataset: +500 imagini per clasă
+-  Augmentare avansat: zoom, shear, contrast
+-  Epoci mai mari cu monitoring
 
 #### Mediu Termen  
 - Transfer learning: MobileNetV2 / EfficientNet
