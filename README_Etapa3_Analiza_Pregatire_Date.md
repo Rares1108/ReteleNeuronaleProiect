@@ -163,9 +163,9 @@ Std per canal:  [0.229, 0.224, 0.225]
 **Stratificare:** Distribuție pe clase menținută în fiecare set (~25% per clasă)
 
 **Evitare data leakage:**
-- ✅ Normalizare calculată DOAR pe train, apoi aplicată pe val/test
-- ✅ Augmentări aplicate DOAR pe train
-- ✅ Fără overlap între seturi
+-  Normalizare calculată DOAR pe train, apoi aplicată pe val/test
+-  Augmentări aplicate DOAR pe train
+-  Fără overlap între seturi
 
 ### 4.4 Salvarea Rezultatelor Preprocesării
 
@@ -203,16 +203,16 @@ data/
 ## 5. Fișiere Generate în Etapa 3
 
 ```
-✅ data/raw/                    - Date brute descărcate și organizate
-✅ data/processed/             - Date curățate și transformate
-✅ data/train/                 - 70% date pentru antrenare
-✅ data/validation/            - 15% date pentru validare
-✅ data/test/                  - 15% date pentru testare
-✅ src/preprocessing/
+ data/raw/                    - Date brute descărcate și organizate
+ data/processed/             - Date curățate și transformate
+ data/train/                 - 70% date pentru antrenare
+ data/validation/            - 15% date pentru validare
+ data/test/                  - 15% date pentru testare
+ src/preprocessing/
    ├── preprocess_raw_to_processed.py
    └── split_processed_into_train_val_test.py
-✅ config/training_config.json - Parametri preprocesare
-✅ data/README.md              - Documentație dataset
+ config/training_config.json - Parametri preprocesare
+ data/README.md              - Documentație dataset
 ```
 
 ---
@@ -221,13 +221,13 @@ data/
 
 | **Validare** | **Valoare** | **Status** |
 |-------------|-----------|----------|
-| Imagini preprocesate | 2375 | ✅ OK |
-| Imagini eliminate (blur) | 125 (5%) | ✅ OK |
-| Distribuție clase train | ~25% fiecare | ✅ OK |
-| Data leakage în normalizare | 0 (calc doar pe train) | ✅ OK |
-| Dimensiuni uniforme | 128×128 | ✅ OK |
-| Format fișiere | PNG/JPG | ✅ OK |
-| Timp preprocesare | ~5 minute (2375 imagini) | ✅ OK |
+| Imagini preprocesate | 2375 |  OK |
+| Imagini eliminate (blur) | 125 (5%) |  OK |
+| Distribuție clase train | ~25% fiecare |  OK |
+| Data leakage în normalizare | 0 (calc doar pe train) |  OK |
+| Dimensiuni uniforme | 128×128 |  OK |
+| Format fișiere | PNG/JPG |  OK |
+| Timp preprocesare | ~5 minute (2375 imagini) |  OK |
 
 ---
 
@@ -239,7 +239,7 @@ data/
 - [x] Seturi train/val/test generate și stratificate (70-15-15)
 - [x] Documentație completată (README_Etapa3)
 
-**ETAPA 3 COMPLETA** ✅
+**ETAPA 3 COMPLETA** 
 
 ---
 
@@ -249,9 +249,9 @@ data/
 **Observații originale:** 1000 imagini generate (40% din total)
 
 **Tipul contribuției:**
-- ✅ Date generate prin simulare 3D (Blender)
-- ✅ Variații: iluminare, unghiuri, fundal
-- ✅ Documente: `docs/generated_vs_real.png`, `docs/data_statistics.csv`
+-  Date generate prin simulare 3D (Blender)
+-  Variații: iluminare, unghiuri, fundal
+-  Documente: `docs/generated_vs_real.png`, `docs/data_statistics.csv`
 
 ---
 
